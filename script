@@ -1,0 +1,15 @@
+
+git clone https://gitlab.com/staskuznetsov/site.git -b master
+git clone https://github.com/TesovVladimir/exam-tesov.git
+touch /root/exam-tesov/hosts
+echo 51.132.245.96 > /root/exam-tesov/hosts
+ansible-playbook -i /root/exam-tesov/hosts /root/exam-tesov/playbook.yml
+rm -Rf  /root/site
+git clone https://gitlab.com/staskuznetsov/site.git -b dev
+echo 51.132.243.225 > /root/exam-tesov/hosts
+ansible-playbook -i /root/exam-tesov/hosts /root/exam-tesov/playbook.yml
+rm -Rf /root/site
+git clone https://gitlab.com/staskuznetsov/site.git -b feature
+echo 4.221.35.124 > /root/exam-tesov/hosts
+ansible-playbook -i /root/exam-tesov/hosts /root/exam-tesov/playbook.yml
+
