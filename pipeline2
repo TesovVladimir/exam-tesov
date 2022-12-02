@@ -28,14 +28,14 @@ pipeline {
       sh "echo 'echo ******************end cloning branch main from git********************'"
     }
   }
-    stage('Stage 3. deploying branch master to Prob1 4.224.26.223') {
+    stage('Stage 3. deploying branch master to Prob1 51.132.245.96') {
       steps {
       //cleanWs() // Clean before build
-      sh "echo '******************start deploying branch master to Prob1 4.224.26.223 ********************'"
+      sh "echo '******************start deploying branch master to Prob1 51.132.245.96 ********************'"
       sh "touch /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
-      sh "echo 4.224.26.223 > /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
+      sh "echo 51.132.245.96 > /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
       sh "ansible-playbook /var/lib/jenkins/workspace/pipeline2/jenkins/playbook.yml -u root --key-file=/key/id_rsa -i /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
-      sh "echo 'echo ******************end deploying branch master to Prob1 4.224.26.223********************'"
+      sh "echo 'echo ******************end deploying branch master to Prob1 51.132.245.96********************'"
     }
   }
   
@@ -49,14 +49,14 @@ pipeline {
     }
   }
   
-    stage('Stage 5. deploying branch dev to Prob2 20.204.120.120') {
+    stage('Stage 5. deploying branch dev to Prob2 51.132.243.225') {
       steps {
       //cleanWs() // Clean before build
-      sh "echo '******************start deploying branch dev to Prob2 20.204.120.120 ********************'"
+      sh "echo '******************start deploying branch dev to Prob2 51.132.243.225 ********************'"
       sh "touch /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
-      sh "echo 20.204.120.120 > /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
+      sh "echo 51.132.243.225 > /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
       sh "ansible-playbook /var/lib/jenkins/workspace/pipeline2/jenkins/playbook.yml -u root --key-file=/key/id_rsa -i /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
-      sh "echo 'echo ******************end deploying branch dev to Prob2 20.204.120.120********************'"
+      sh "echo 'echo ******************end deploying branch dev to Prob2 51.132.243.225 ********************'"
     }
   }
   
@@ -69,14 +69,14 @@ pipeline {
       sh "echo 'echo ******************end cloning branch feature ********************'"
     }
   }
-    stage('Stage 7. deploying branch dev to Prob3 20.250.30.116') {
+    stage('Stage 7. deploying branch dev to Prob3 4.221.35.124') {
       steps {
       //cleanWs() // Clean before build
-      sh "echo '****************** start deploying branch dev to Prob3 20.250.30.116 ********************'"
+      sh "echo '****************** start deploying branch dev to Prob3 4.221.35.124 ********************'"
       sh "touch /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
-      sh "echo 20.250.30.116 > /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
+      sh "echo 4.221.35.124 > /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
       sh "ansible-playbook /var/lib/jenkins/workspace/pipeline2/jenkins/playbook.yml -u root --key-file=/key/id_rsa -i /var/lib/jenkins/workspace/pipeline2/jenkins/hosts"
-      sh "echo 'echo ****************** end deploying branch dev to Prob3 20.250.30.116 ********************'"
+      sh "echo 'echo ****************** end deploying branch dev to Prob3 4.221.35.124 ********************'"
 }
 }
 }
