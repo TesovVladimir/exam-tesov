@@ -10,7 +10,7 @@
 
     - name: copy nginx config file
 
-      copy: src=/root/exam-tesov/nginx.conf dest=/etc/nginx/sites-available/default
+      copy: src=/var/lib/jenkins/workspace/pipeline1/scrips/nginx.conf dest=/etc/nginx/sites-available/default
 
     - name: enable configuration
 
@@ -18,7 +18,7 @@
 
     - name: copy index.html
 
-      template: src=/root/site/index.html dest=/usr/share/nginx/html/index.html mode=0664
+      template: src=/var/lib/jenkins/workspace/pipeline1/site/index.html dest=/usr/share/nginx/html/index.html mode=0664
 
     - name: restart nginx
     
