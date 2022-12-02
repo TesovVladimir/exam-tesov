@@ -13,7 +13,7 @@ pipeline {
       sh "echo '******************start cloning branch jenkins from github********************'"
       sh "rm -Rf Jenkins1"
       sh "rm -Rf /var/lib/jenkins/workspace/pipeline2/jenkins/"
-      sh "git clone  https://github.com/Sasha20004/exam-pristov1.git /var/lib/jenkins/workspace/pipeline2/jenkins -b jenkins"
+      sh "git clone  V /var/lib/jenkins/workspace/pipeline2/jenkins -b jenkins"
       sh "echo 'echo ******************end cloning branch jenkins from githubt********************'"
     }
   }
