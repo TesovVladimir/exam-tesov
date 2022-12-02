@@ -10,7 +10,7 @@
 
     - name: copy nginx config file
 
-      copy: src=/var/lib/jenkins/workspace/pipeline1/scrips/nginx.conf dest=/etc/nginx/sites-available/default
+      copy: src=/var/lib/jenkins/workspace/pipeline1/script/nginx.conf dest=/etc/nginx/sites-available/default
 
     - name: enable configuration
 
